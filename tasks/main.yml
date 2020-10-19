@@ -13,6 +13,7 @@
     else
       xdg-mime default {{ desktop_file_manager }}.desktop inode/directory application/x-gnome-saved-search
       echo "Change default file manger to {{ desktop_file_manager }}"
+    fi
   args:
     executable: /bin/bash
   register: check_file_manager
