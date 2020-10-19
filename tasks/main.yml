@@ -1,0 +1,19 @@
+- name: 'Install {{ desktop_file_manager }}'
+  package:
+    name: '{{ desktop_file_manager }}'
+    state: present
+
+- name: 'Configuring {{ desktop_file_manager }} as default file manager'
+  shell: |
+    set -o pipefail
+    FILE_MANAGER=$(xdg-mime query default inode/directory)
+    if [ "$FILE_MANAGER" == "{{ desktop_file_manager }}.desktop" ]
+      then
+        echo "OK"
+    else
+      xdg-mime default {{ desktop_file_manager }}.desktop inode/directory application/x-gnome-saved-search
+      echo "Change default file manger to {{ desktop_file_manager }}"
+  args:
+    executable: /bin/bash
+  register: check_file_manager
+  changed_when: check_file_manager.stdout != "OK"

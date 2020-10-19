@@ -1,0 +1,27 @@
+galaxy_info:
+  role_name: gnome_file_manager
+
+  author: Luiz Teixeira (@luyz25)
+  description: >-
+    This role handles configure the default file manager for gnome-shell desktop.
+  license: MIT
+
+  min_ansible_version: 2.5
+
+  platforms:
+  - name: Debian
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+
+  galaxy_tags:
+    - gnome
+    - gnome-shell
+    - system
+
+dependencies: []
