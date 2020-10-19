@@ -1,4 +1,6 @@
 - name: 'Install {{ desktop_file_manager }}'
+  become: yes
+  become_method: sudo
   package:
     name: '{{ desktop_file_manager }}'
     state: present
