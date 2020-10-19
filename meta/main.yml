@@ -21,7 +21,7 @@ galaxy_info:
 
   galaxy_tags:
     - gnome
-    - gnome-shell
+    - gnomeshell
     - system
 
 dependencies: []
