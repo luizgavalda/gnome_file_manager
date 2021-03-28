@@ -34,4 +34,4 @@ MIT
 
 ## Author Information
 
-Luiz Teixeira (@luyz25)
+Luiz Teixeira (@luizgavalda)
