@@ -23,7 +23,7 @@ None
 ```yaml
 - hosts: localhost
   roles:
-    - role: luyz25.gnome_file_manager
+    - role: luizgavalda.gnome_file_manager
       vars:
         desktop_file_manager: nemo
 ```
